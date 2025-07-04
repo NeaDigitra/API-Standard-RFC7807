@@ -1,5 +1,7 @@
 # API Standard RFC7807
 
+![CI](https://github.com/NeaDigitra/API-Standard-RFC7807/actions/workflows/test.yml/badge.svg)
+
 A production-ready Express.js API boilerplate implementing **RFC7807 Problem Details** standard, configurable error documentation, and universal success/error responses. Built for scalable API development with clean PR history and coding standards.
 
 ---
@@ -12,6 +14,7 @@ A production-ready Express.js API boilerplate implementing **RFC7807 Problem Det
 * ✅ **Environment-based config with dotenv**
 * ✅ **Example API route with validation**
 * ✅ **Express 5 ready**
+* ✅ **Built-in unit tests with Jest + node-mocks-http**
 
 ---
 
@@ -30,6 +33,10 @@ src/
  └── utils/
       ├── sendProblem.js     # RFC7807 error response helper
       └── sendSuccess.js     # Success response helper
+test/
+ ├── errorDocPage.test.js    # Unit test for HTML generator
+ ├── sendProblem.test.js     # Unit test for RFC7807 helper
+ └── sendSuccess.test.js     # Unit test for success helper
 ```
 
 ---
@@ -50,7 +57,8 @@ ERROR_BASE_URL=https://api.domain.com/errors
 
 ```bash
 npm install
-node src/app.js
+npm test   # run unit tests
+npm start  # # start the server
 ```
 
 * Access API: `http://localhost:3000/api/example?email=test@example.com`
