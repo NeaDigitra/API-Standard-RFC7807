@@ -6,6 +6,7 @@ test('should return success response with data', () => {
   sendSuccess(response, { test: true }, 'Success')
   const data = response._getJSONData()
   expect(response.statusCode).toBe(200)
+  expect(response.getHeader('Content-Type')).toMatch(/application\/json/)
   expect(data.status).toBe(200)
   expect(data.message).toBe('Success')
   expect(data.data.test).toBe(true)

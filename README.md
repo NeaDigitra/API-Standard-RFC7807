@@ -58,7 +58,7 @@ ERROR_BASE_URL=https://api.domain.com/errors
 ```bash
 npm install
 npm test   # run unit tests
-npm start  # # start the server
+npm start  # start the server
 ```
 
 * Access API: `http://localhost:3000/api/example?email=test@example.com`
