@@ -17,5 +17,5 @@ function createApp() {
  * Start the Express App
  */
 const appInstance = createApp()
-const portNumber = process.env.APP_PORT || 3000
+const portNumber = parseInt(process.env.APP_PORT, 10) || 3000
 appInstance.listen(portNumber)
