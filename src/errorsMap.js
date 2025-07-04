@@ -136,5 +136,5 @@ module.exports = {
       detail: 'The service is temporarily unavailable.',
       instance: '/v1/any-endpoint'
     }
-  }
+  },
 }
