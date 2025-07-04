@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NeaDigitra/API-Standard-RFC7807/issues"
   },
-  "homepage": "https://github.com/NeaDigitra/API-Standard-RFC7807#readme"
+  "homepage": "https://github.com/NeaDigitra/API-Standard-RFC7807#readme",
+  "dependencies": {
+    "dotenv": "^17.0.1"
+  }
 }

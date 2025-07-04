@@ -1,4 +1,5 @@
 const errorMap = require('../errorsMap')
+const { errorBaseUrl } = require('../config')
 
 /**
  * RFC7807 Problem Details Response  
@@ -6,7 +7,7 @@ const errorMap = require('../errorsMap')
  */
 function sendProblem(response, status, errorKey, detail = '', instance = '', errors = null) {
   const err = errorMap[errorKey] || { title: 'Error', status, detail: '', solution: '', example: {} }
-  const type = `https://api.domain.com/errors/${errorKey}`
+  const type = `${errorBaseUrl}/${errorKey}`
   return response.status(status).json({
     type,
     title: err.title,
