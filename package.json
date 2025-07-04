@@ -4,14 +4,13 @@
   "description": "API Standard RFC7807 implementation for error and success response, including documentation generator for organizations.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NeaDigitra/API-Standard-RFC7807.git"
   },
-  "author": "NeaByteLab",
+  "author": "NeaDigitra",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NeaDigitra/API-Standard-RFC7807/issues"
